@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "sass:map";
+
+.attention{
+  padding: get-pc-vw(30) get-pc-vw(20) get-pc-vw(30) get-pc-vw(20);
+  font-family: 'Noto Sans JP', sans-serif !important;
+  
+  &__list{
+    li{
+      font-size: get-sp-vw(16);
+      position: relative;
+      padding-left: get-sp-vw(40);
+      line-height: 1.6;
+      
+        @include mq($size: 'desktop') {
+          font-size: get-pc-vw(24);
+          padding-left: get-pc-vw(60);
+        }
+        &:not(:first-child){
+          margin-top: get-sp-vw(10);
+          @include mq($size: 'desktop'){
+            margin-top: get-pc-vw(10);
+          }
+        }
+        &::before{
+          position: absolute;
+            left: 0;
+            top: .2em;
+            content: "";
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("../image/attention/attention-check.svg");
+            width: get-sp-vw(35);
+            height: get-sp-vw(25);
+            display: inline-block;
+            @include mq($size: 'desktop'){
+              width: get-pc-vw(40);
+              height: get-pc-vw(35);
+            }
+        }
+      }
+    }
+  &__text{
+  font-size: get-sp-vw(14);
+  color: #FF0000;
+  margin-top: get-sp-vw(20);
+  padding-left: get-sp-vw(0);
+
+    @include mq($size: 'desktop') {
+      font-size: get-pc-vw(20);
+      margin-top: get-pc-vw(20);
+      padding-left: get-pc-vw(20);
+    }
+  }
+}

@@ -45,6 +45,62 @@ body {
   width: 100%;
 }
 
+.attention {
+  padding: 2.3076923077vw 1.5384615385vw 2.3076923077vw 1.5384615385vw;
+  font-family: "Noto Sans JP", sans-serif !important;
+}
+.attention__list li {
+  font-size: 4.2666666667vw;
+  position: relative;
+  padding-left: 10.6666666667vw;
+  line-height: 1.6;
+}
+@media screen and (min-width: 835px) {
+  .attention__list li {
+    font-size: 1.8461538462vw;
+    padding-left: 4.6153846154vw;
+  }
+}
+.attention__list li:not(:first-child) {
+  margin-top: 2.6666666667vw;
+}
+@media screen and (min-width: 835px) {
+  .attention__list li:not(:first-child) {
+    margin-top: 0.7692307692vw;
+  }
+}
+.attention__list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../image/attention/attention-check.svg");
+  width: 9.3333333333vw;
+  height: 6.6666666667vw;
+  display: inline-block;
+}
+@media screen and (min-width: 835px) {
+  .attention__list li::before {
+    width: 3.0769230769vw;
+    height: 2.6923076923vw;
+  }
+}
+.attention__text {
+  font-size: 3.7333333333vw;
+  color: #FF0000;
+  margin-top: 5.3333333333vw;
+  padding-left: 0vw;
+}
+@media screen and (min-width: 835px) {
+  .attention__text {
+    font-size: 1.5384615385vw;
+    margin-top: 1.5384615385vw;
+    padding-left: 1.5384615385vw;
+  }
+}
+
 .question {
   padding: 4.6153846154vw 1.5384615385vw 1.5384615385vw 1.5384615385vw;
   text-align: center;
